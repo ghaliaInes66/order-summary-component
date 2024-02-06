@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+/*color*/
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+
+/*font*/
+--Font-size: 15px;
+--Font-family:'Red Hat Display',sans-serif; 
+--Font-Weight: 500;
+--Font-Weight-med: 700;
+--Font-Weight-bold: 900;
+
+--border-radius:15px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+    color: var(--Desaturated-blue);
+    font-family: var(--Font-family);
+    font-size: var(--Font-size);
+    font-weight: var(--Font-Weight);
+    text-align: center;
+}
+
+h1,h3{
+    color: var(--Dark-blue);
+    font-weight: var(--Font-Weight-bold);
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: .9rem;
+}
+
+p{
+    width: 75%;
+}
+
+main{
+    width: 350px;
+    height: auto;
+    background-color: white;
+    border-radius: var(--border-radius);
+} 
+
+.music{
+    width: 100%;
+    height: 150px;
+    border-radius: 15px 15px 0 0;
+}
+
+.content{
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+}
+
+.musicPlan{
+    width: 90%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: var(--Very-pale-blue);
+    border-radius: var(--border-radius);
+    align-items: center;
+    justify-items: center;
+}
+
+.musicPlan p{
+    font-size: .9rem;
+}
+
+a{
+    font-size: .8rem;
+    color: var(--Bright-blue);
+    font-weight: var(--Font-Weight-med);
+    transition: all 0.15s;
+}
+
+a:hover{
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+button{
+    width: 90%;
+    height: 40px;
+    border-radius: var(--border-radius);
+    border: 0 solid;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-family: var(--Font-family);
+    font-size: .8rem;
+    font-weight: var(--Font-Weight-med);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+button:hover{
+    opacity: 0.8;
+    box-shadow: 0px 5px 15px hsl(245, 49%, 75%);
+}
+
+.cancel{
+    font-weight: var(--Font-Weight-med);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.cancel:hover{
+    color: var(--Dark-blue);
+}
+
+@media (max-width:400px){
+    body{
+        background-image: url(./images/pattern-background-mobile.svg);
+    }
+
+    main{
+        width: 90%;
+    }
+}
